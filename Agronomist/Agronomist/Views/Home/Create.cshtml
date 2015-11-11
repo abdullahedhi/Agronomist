@@ -1,0 +1,41 @@
+﻿@model Agronomist.mvcUser
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+
+}
+
+<div id="form">
+    <h2>Login</h2>
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true, "Login Failed, check details");
+        <div>
+            <fieldset>
+
+                <div class="editor-label">@Html.LabelFor(u => u.FirstName)</div>
+
+                <div class="editor-field">
+                    @Html.TextBoxFor(u => u.FirstName)
+                    @Html.ValidationMessageFor(u => u.FirstName)
+                </div>
+                <br />
+                <div class="editor-label">@Html.LabelFor(u => u.LastName)</div>
+
+                <div class="editor-field">
+                    @Html.PasswordFor(u => u.LastName)
+                    @Html.ValidationMessageFor(u => u.LastName)
+                </div>
+                <br />
+                <button type="submit" id="button">Log In</button>
+            </fieldset>
+        </div>
+    }
+</div>
+
+
+
+
+

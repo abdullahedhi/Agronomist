@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBAgronomistModelStoreContainer" CdmEntityContainer="DBAgronomistEntities1">
+    <EntitySetMapping Name="mvcUsers">
+      <EntityTypeMapping TypeName="DBAgronomistModel.mvcUser">
+        <MappingFragment StoreEntitySet="mvcUser">
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="@Url.Content("http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css")">
+    <script src="@Url.Content("https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js")"></script>
+    <script src="@Url.Content("http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js")"></script>
+
+
+
+
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" />
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="@Url.Content("~/Scripts/jquery.min.js")"></script>
+
+    <!-- Custom Theme files -->
+
+
+    <link href="@Url.Content("~/Content/style.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/Login.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Content/account.css")" rel="stylesheet" />
+    <!-- Custom Theme files -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta name="keywords" content="AGROFIRM Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--webfont-->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+
+    <script src="@Url.Content("~/Scripts/responsiveslides.min.js")"></script>
+
+
+
+
+    <script>
+        $(function () {
+            $("#slider").responsiveSlides({
+                auto: true,
+                speed: 500,
+                namespace: "callbacks",
+                pager: true,
+            });
+        });
+
+
+    </script>
+
+</head>
+<body>
+    <!-- header-section-starts -->
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="~/images/logo.png" />
+                </a>
+            </div>
+            <div class="tollfree">
+                <ul>
+                    <li><i class="phone"></i></li>
+                    <li>
+                        <p class="call">TOLL FREE :</p>
+                        <p>1-009-123-1234</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div class="navigation">
+                <div class="navigation-bar">
+                    <div class="search2">
+                        <form>
+                            <input type="text" value="Search.." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search..';}" />
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+                    <span class="menu"></span>
+                    <div class="top-menu">
+                        <ul>
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+
+                            <li><a href="products.html">Products</a></li>
+                            <li>@Html.ActionLink("Register", "Create", "Home")</li>
+                            <li>@Html.ActionLink("Login", "LogIn", "Home")</li>
+                          
+
+
+
+                            <div class="clearfix"></div>
+                        </ul>
+                    </div>
+                    <!-- script for menu -->
+                    <script>
+                        $("span.menu").click(function () {
+                            $(".top-menu").slideToggle("slow", function () {
+                                // Animation complete.
+                            });
+                        });
+                    </script>
+                    <!-- script for menu -->
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!----->
+    <!-- header-section-ends -->
+    
+
+    @RenderBody()
+    <!-- footer-section -->
+    <div class="footer">
+        <div class="container">
+            <div class="copyright text-center">
+                <p>&copy; 2015 All rights reserved | Design by  <a href="http://w3layouts.com">  W3layouts</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- footer-section -->
+
+
+</body>
+</html>
